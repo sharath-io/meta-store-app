@@ -3,11 +3,12 @@ import { ProductContext } from "../contexts/ProductContext";
 
 export function Cart() {
   const { state, dispatch } = useContext(ProductContext);
-  console.log(state.cart);
+
   return (
     <>
       <h1>Cart Page</h1>
-      <ul className="card-container">
+      <div className="cart-component">
+      <ul className="cart card-container">
         {state.cart.map((product) => (
           <li className="product-item card-item" key={product._id}>
           <p className="title">{product.title}</p>
@@ -31,6 +32,21 @@ export function Cart() {
         </li>
         ))}
       </ul>
+      <div className="cart-summary">
+          <h2>Total Cart : </h2>
+          <ul>
+            {
+              state.cart.map(product => <li className="cart-price-summary">
+                <p>{product.title} </p>
+                <p>Qty : {product.qty}</p>
+                <p>- {product.sellingPrice}</p>
+              </li>)
+            }
+          </ul>
+          <hr/>
+          <h2>Total Price : {state.cart.reduce((acc,curr) => acc+Number(curr.sellingPrice * curr.qty),0)}</h2>
+      </div>
+      </div>
     </>
   );
 }

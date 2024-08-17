@@ -14,7 +14,7 @@ const reducerFn = (state, action) => {
       case "REMOVE_FROM_CART":
         return {
           ...state,
-          cart: state.cart.filter(product=> product._id !== action.payload)
+          cart: state.cart.filter(product => product._id !== action.payload)
         }
         case "ADD_QTY":
           return {

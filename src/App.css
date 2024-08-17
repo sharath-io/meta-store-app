@@ -7,11 +7,14 @@
 }
 
 .card-container{
-    list-style-type: none;
     display: flex;
     justify-content: center;
     margin: 3rem;
     flex-wrap: wrap;
+  }
+
+  li{
+    list-style-type: none;
   }
   
   .card-item{
@@ -72,3 +75,28 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
+
+  .cart-component{
+    display: flex;
+    justify-content: center;
+  }
+
+  .cart{
+    flex-basis: 60%;
+  }
+
+  .cart-summary{
+    margin: 3rem;
+    padding: 2rem;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    height: 30rem;
+  }
+
+ .cart-price-summary{
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  
+ }
