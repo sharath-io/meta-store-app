@@ -1,19 +1,14 @@
-import {Link,Routes,Route} from "react-router-dom";
+import {Routes,Route} from "react-router-dom";
 
-import {ProductListing} from "./pages";
-import { Cart } from "./pages";
-
+import {ProductListing, Cart } from "./pages";
+import { Navbar } from "./components/Navbar";
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>meta store</h1>
-
-      <nav>
-        <Link to="/">Products</Link>
-        <Link to="/cart">Cart</Link>
-      </nav>
+      <Navbar/>
 
       <Routes>
         <Route path="/" element={<ProductListing/>}></Route>
