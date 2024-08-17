@@ -67,3 +67,8 @@
   .category{
     text-decoration: underline;
   }
+
+  .card-button[disabled]{
+    background-color: #ccc;
+    cursor: not-allowed;
+  }

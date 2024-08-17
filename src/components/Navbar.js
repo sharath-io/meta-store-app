@@ -11,12 +11,13 @@ export function Navbar(){
         fontWeight: isActive ? "bolder" : "",
         textDecoration: isActive ? "underline" : "none",
     })
+    const totalCartItems = state.cart.reduce((acc,curr) => acc+curr.qty,0)
 
     return (
         <>   
           <nav className="nav-container">       
             <NavLink to="/" style={getActiveStyle}>Products</NavLink>
-            <NavLink to="/cart" style={getActiveStyle}>Cart({state.cart.length})</NavLink>
+            <NavLink to="/cart" style={getActiveStyle}>Cart({totalCartItems})</NavLink>
           </nav>
         </>
     )
