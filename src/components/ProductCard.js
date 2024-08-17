@@ -1,4 +1,8 @@
+import { useContext } from "react"
+import { ProductContext } from "../contexts/ProductContext"
+
 export function ProductCard({product}){
+  const {dispatch} = useContext(ProductContext)
     return (
         <>
           <li className="product-item card-item">
@@ -9,7 +13,7 @@ export function ProductCard({product}){
               className="product-img"
             />
             <div>
-              <button className="card-button">Add to Cart</button>
+              <button className="card-button" onClick={()=> dispatch({type:'ADD_TO_CART', value:product._id})}>Add to Cart</button>
             </div>
           </li>
         </>
