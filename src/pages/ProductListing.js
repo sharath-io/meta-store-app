@@ -4,10 +4,11 @@ import { ProductContext } from "../contexts/ProductContext";
 
 export function ProductListing() {
   const {state} = useContext(ProductContext)
-  console.log('from product listing: ', state.products)
+  const totalProducts = state.products.length;
+
   return (
     <>
-      <h1>Product Listing Page</h1>
+      <h1>Meta Products - {totalProducts}</h1>
       <ul className="card-container">
         {
          state.products.map((product) => (
