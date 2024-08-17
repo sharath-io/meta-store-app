@@ -8,7 +8,7 @@ const reducerFn =(state,action) => {
     switch(action.type){
         case 'ADD_TO_CART':
             return {
-                ...state,cart:[...state.cart, state.products.find(product => product.id===action.payload)]
+                ...state,cart:[...state.cart, state.products.find(product => product._id===action.payload)]
             }
         default: return state
     }
