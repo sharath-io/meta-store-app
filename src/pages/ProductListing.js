@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { ProductCard } from "../components/ProductCard";
-import { products } from "../db/products";
+import { ProductContext } from "../contexts/ProductContext";
+
 export function ProductListing() {
+  const {products} = useContext(ProductContext)
+  console.log('products here: ', products)
   return (
     <>
       <h1>Product Listing Page</h1>
