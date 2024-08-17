@@ -1,11 +1,23 @@
 import { useContext } from "react";
+import { toast } from "react-toastify";
 import { ProductContext } from "../contexts/ProductContext";
+import { useNavigate } from "react-router-dom";
 
 export function Cart() {
   const { state, dispatch } = useContext(ProductContext);
+  const navigate = useNavigate()
 
   return (
     <>
+    {
+      state.cart.length ===0 
+      ? <div> 
+          <h1>Empty Cart</h1>
+          <button className="card-button shop-products"  onClick={() => navigate("/")}>Shop Products</button>
+
+        </div>
+      : <div>
+      
       <h1>Cart Page</h1>
       <div className="cart-component">
       <ul className="cart card-container">
@@ -27,7 +39,10 @@ export function Cart() {
                {product.qty}
             <button className="card-button go-to-cart" onClick={()=> dispatch({type:"ADD_QTY", payload:product._id})}>+</button>
           </div>
-          <button   className="card-button" onClick={()=> dispatch({type:'REMOVE_FROM_CART', payload:product._id})}>Remove from Cart</button>
+          <button   className="card-button" onClick={()=>{
+           dispatch({type:'REMOVE_FROM_CART', payload:product._id});
+           toast.error('item removed from cart');  
+        }}>Remove from Cart</button>
   
         </li>
         ))}
@@ -47,6 +62,8 @@ export function Cart() {
           <h2>Total Price : {state.cart.reduce((acc,curr) => acc+Number(curr.sellingPrice * curr.qty),0)}</h2>
       </div>
       </div>
+      </div>
+    }
     </>
   );
 }

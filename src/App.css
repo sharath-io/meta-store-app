@@ -49,9 +49,13 @@
     border-radius: 24px;
   }
 
-  .go-to-cart{
+  .go-to-cart, .shop-products{
     background-color: #384c54;
     color: white;
+  }
+
+  .shop-products{
+   margin-top: 5rem;
   }
 
   span{

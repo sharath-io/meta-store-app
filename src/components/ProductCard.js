@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import { toast } from "react-toastify";
+
 import { ProductContext } from "../contexts/ProductContext";
 import { useNavigate } from "react-router-dom";
 
@@ -26,9 +28,10 @@ export function ProductCard({ product }) {
           ) : (
             <button
               className="card-button"
-              onClick={() =>
-                dispatch({ type: "ADD_TO_CART", payload: product._id })
-              }
+              onClick={() =>{
+                dispatch({ type: "ADD_TO_CART", payload: product._id });
+                toast.success('item added to cart');   
+              }}
             >
               Add to Cart
             </button>
