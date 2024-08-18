@@ -16,6 +16,7 @@ export function Navbar() {
 
   return (
     <>
+    <nav className="nav-container">
       <ul className="nav-bar">
         <li>meta-store</li>
         <li>
@@ -29,6 +30,7 @@ export function Navbar() {
           </NavLink>
         </li>
       </ul>
+      </nav>
     </>
   );
 }

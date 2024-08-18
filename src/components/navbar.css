@@ -7,3 +7,37 @@
     padding: 1rem;
     font-size: 2rem;
   }
+
+  /* Laptop and larger screens */
+@media (min-width: 64em) {
+  .nav-bar {
+    gap: 3rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 48em) and (max-width: 63.9375em) {
+  .nav-bar {
+    font-size: 1.5rem;
+    gap: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 47.9375em) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 1rem;
+  }
+  
+  .nav-bar li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.nav-container {
+  width: 100%;
+}
