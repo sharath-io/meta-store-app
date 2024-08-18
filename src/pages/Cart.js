@@ -37,7 +37,7 @@ export function Cart() {
                 <img src={product.image} alt={product.title} />
                 <div className="cart-desc">
                   <p className="title">{product.title}</p>
-                  <p className="price">${product.originalPrice} <span>${product.sellingPrice}</span></p>
+                  <p className="price"><span>${product.originalPrice}</span>  ${product.sellingPrice} USD</p>
                   
                   <div>
                   <button

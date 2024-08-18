@@ -65,6 +65,8 @@ li{
 
 .price{
   font-weight: bolder;
+  margin: 1rem 0;
+  font-size: 1.5rem;
 }
 
 .price > span{
