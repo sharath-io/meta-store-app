@@ -14,7 +14,9 @@ export function ProductCard({ product }) {
         <img src={product.image} alt={product.title} className="product-img" />
 
         <p className="category">{product.categoryName}</p>
-        <p className="price"><span>${product.originalPrice}</span>  ${product.sellingPrice} USD</p>
+        <p className="price">
+          <span>${product.originalPrice}</span> ${product.sellingPrice} USD
+        </p>
         <p>rating: {product.rating}</p>
 
         <div>
@@ -28,16 +30,15 @@ export function ProductCard({ product }) {
           ) : (
             <button
               className="btn"
-              onClick={() =>{
+              onClick={() => {
                 dispatch({ type: "ADD_TO_CART", payload: product._id });
-                toast.success('item added to cart');   
+                toast.success("item added to cart");
               }}
             >
               Add to Cart
             </button>
           )}
         </div>
-
       </li>
     </>
   );

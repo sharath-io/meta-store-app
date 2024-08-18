@@ -13,8 +13,6 @@ import LinkCable from './images/linkCable.jpg';
 import MetaQuestAdapter from './images/metaQuestAdapter.jpg';
 import QuestRightController from './images/questRightController.jpg';
 import QuestLeftController from './images/questLeftController.jpg';
-
-
 import RaybanRound from './images/raybanRound.jpg';
 import RaybanMeteor from './images/raybanMeteor.jpg';
 import RaybanWayfarer from './images/raybanWayfarer.jpg';

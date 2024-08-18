@@ -1,28 +1,28 @@
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
+body {
   background-color: #f1f3f6;
   min-width: 20em;
 }
 
-li{
+li {
   list-style-type: none;
 }
 
-.main-content{
-  margin:2rem;
+.main-content {
+  margin: 2rem;
 }
 
 .main-content > h1 {
   text-align: center;
-  margin:2rem;
+  margin: 2rem;
 }
 
-.empty-cart{
+.empty-cart {
   text-align: center;
 }
 
@@ -33,9 +33,9 @@ li{
   margin: 1rem;
 }
 
-.product-item{
+.product-item {
   border: 1px solid gray;
-  box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
   border-radius: 15px;
   padding: 1rem;
   cursor: pointer;
@@ -44,50 +44,50 @@ li{
   background-color: white;
 }
 
-.product-item:hover{
-  box-shadow: 0 0 11px rgba(37, 153, 157, 0.2); 
+.product-item:hover {
+  box-shadow: 0 0 11px rgba(37, 153, 157, 0.2);
 }
 
-.title{
-    font-size: 1.5rem;
-    font-weight: bold;
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.product-img{
+.product-img {
   max-width: 150px;
   width: 100%;
   height: 200px;
 }
 
-.category{
+.category {
   text-decoration: underline;
 }
 
-.price{
+.price {
   font-weight: bolder;
   margin: 1rem 0;
   font-size: 1.5rem;
 }
 
-.price > span{
+.price > span {
   text-decoration: line-through;
   font-weight: normal;
 }
 
-.product-item > p{
+.product-item > p {
   font-size: 1.3rem;
   margin: 0.5rem;
 }
 
-.cart{
+.cart {
   display: flex;
   justify-content: center;
-  gap:4rem;
+  gap: 4rem;
   flex-wrap: wrap;
   margin: 3rem;
 }
 
-.cart >  *{
+.cart > * {
   background-color: white;
   border: 1px solid gray;
   border-radius: 15px;
@@ -108,18 +108,18 @@ li{
   height: 200px;
 }
 
-.cart-product{
+.cart-product {
   display: flex;
   justify-content: flex-start;
   gap: 3rem;
 }
 
-.cart-price-details{
+.cart-price-details {
   padding: 4rem;
   height: 20rem;
 }
 
-.cart-price-details p{
+.cart-price-details p {
   width: 25rem;
   font-size: 1.5rem;
   line-height: 4rem;
@@ -127,12 +127,12 @@ li{
   justify-content: space-between;
 }
 
-.cart-desc{
+.cart-desc {
   line-height: 1.5rem;
   margin-top: 2rem;
 }
 
-.btn{
+.btn {
   padding: 10px;
   background-color: white;
   font-weight: bolder;
@@ -142,16 +142,15 @@ li{
   border-color: #232f3e;
 }
 
-.btn-primary{
-background-color: #384c54;
-color: white;
-} 
+.btn-primary {
+  background-color: #384c54;
+  color: white;
+}
 
-.btn[disabled]{
+.btn[disabled] {
   background-color: #ccc;
   cursor: not-allowed;
 }
-
 
 /* Mobile */
 @media (max-width: 47.9375em) {

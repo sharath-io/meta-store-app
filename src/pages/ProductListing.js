@@ -9,7 +9,7 @@ export function ProductListing() {
   return (
     <>
       <div className="main-content">
-       <h1>Meta Products - {totalProducts}</h1>
+        <h1>Meta Products - {totalProducts}</h1>
         <ul className="product-listing">
           {state.products.map((product) => (
             <ProductCard product={product} />

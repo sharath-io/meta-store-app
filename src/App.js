@@ -1,21 +1,19 @@
-import {Routes,Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-import {ProductListing, Cart,PageNotFound } from "./pages";
+import { ProductListing, Cart, PageNotFound } from "./pages";
 import { Navbar } from "./components/Navbar";
-import './App.css';
-
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar />
 
       <Routes>
-        <Route path="/" element={<ProductListing/>}></Route>
-        <Route path="/cart" element={<Cart/>}></Route>
+        <Route path="/" element={<ProductListing />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
 
@@ -31,7 +29,6 @@ function App() {
         pauseOnHover
         theme="light"
       />
-      
     </div>
   );
 }

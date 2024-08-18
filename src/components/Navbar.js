@@ -16,20 +16,20 @@ export function Navbar() {
 
   return (
     <>
-    <nav className="nav-container">
-      <ul className="nav-bar">
-        <li>meta-store</li>
-        <li>
-          <NavLink to="/" style={getActiveStyle}>
-            Products
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/cart" style={getActiveStyle}>
-            Cart({totalCartItems})
-          </NavLink>
-        </li>
-      </ul>
+      <nav className="nav-container">
+        <ul className="nav-bar">
+          <li>meta-store</li>
+          <li>
+            <NavLink to="/" style={getActiveStyle}>
+              Products
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/cart" style={getActiveStyle}>
+              Cart({totalCartItems})
+            </NavLink>
+          </li>
+        </ul>
       </nav>
     </>
   );
