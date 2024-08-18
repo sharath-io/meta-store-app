@@ -1,10 +1,9 @@
-.nav-container {
-    margin: 2rem;
-}
-
-.nav-container > * {
-    margin: 1rem;
-    color: black;
-    text-decoration: none;
+.nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+    background-color: #232f3e;
+    color: white;
+    padding: 1rem;
     font-size: 2rem;
-}
+  }

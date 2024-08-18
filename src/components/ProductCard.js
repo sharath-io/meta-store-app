@@ -9,25 +9,25 @@ export function ProductCard({ product }) {
   const navigate = useNavigate();
   return (
     <>
-      <li className="product-item card-item">
+      <li className="product-item">
         <p className="title">{product.title}</p>
         <img src={product.image} alt={product.title} className="product-img" />
 
         <p className="category">{product.categoryName}</p>
-        <p><span>${product.originalPrice}</span>  $ {product.sellingPrice} USD</p>
+        <p className="price"><span>${product.originalPrice}</span>  ${product.sellingPrice} USD</p>
         <p>rating: {product.rating}</p>
 
         <div>
           {state.cart.find((item) => item._id === product._id) ? (
             <button
-              className="card-button go-to-cart"
+              className="btn btn-primary"
               onClick={() => navigate("/cart")}
             >
               Go to Cart
             </button>
           ) : (
             <button
-              className="card-button"
+              className="btn"
               onClick={() =>{
                 dispatch({ type: "ADD_TO_CART", payload: product._id });
                 toast.success('item added to cart');   
