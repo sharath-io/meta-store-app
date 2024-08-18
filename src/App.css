@@ -172,3 +172,8 @@ li {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.custom-toast-container {
+  top: 6rem;
+  right: 0;
+}
