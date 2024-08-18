@@ -1,7 +1,9 @@
 import {Routes,Route} from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {ProductListing, Cart } from "./pages";
+
+
+import {ProductListing, Cart,PageNotFound } from "./pages";
 import { Navbar } from "./components/Navbar";
 import './App.css';
 
@@ -14,7 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<ProductListing/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
+
       <ToastContainer
         position="top-right"
         autoClose={5000}
