@@ -21,7 +21,14 @@ export function Cart() {
 
   return (
     <>
-      <div className="main-content">
+    {
+      state.cart.length===0 
+      ? <div className="main-content empty-cart">
+        <h1>Empty Cart</h1>
+        <button onClick={()=> navigate('/')} className="btn btn-primary ">Expore Products</button>
+      </div>
+   
+      : <div className="main-content">
         <h1>Cart Details</h1>
         <div className="cart">
           <ul className="cart-details">
@@ -84,6 +91,7 @@ export function Cart() {
           </div>
         </div>
       </div>
+       }
     </>
   );
 }
