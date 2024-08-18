@@ -26,10 +26,10 @@ li{
   text-align: center;
 }
 
-.product-listing{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.product-listing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   margin: 1rem;
 }
 
@@ -40,7 +40,6 @@ li{
   padding: 1rem;
   cursor: pointer;
   margin: 1rem;
-  flex-basis: 30%;
   text-align: center;
   background-color: white;
 }
@@ -151,4 +150,26 @@ color: white;
 .btn[disabled]{
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+
+/* Mobile */
+@media (max-width: 47.9375em) {
+  .product-listing {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet */
+@media (min-width: 48em) and (max-width: 63.9375em) {
+  .product-listing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop */
+@media (min-width: 64em) {
+  .product-listing {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
